@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+
+.japanese-text {
+  font-family: "Noto Sans JP";
+  font-weight: bold;
+}
+.big-header {
+  margin: 0 5%;
+  margin-top: 3%;
+  padding: 1%;
+  color: white;
+}
+
+.content-box {
+  width: auto;
+  height: 10%;
+  margin-top: 5%;
+  padding: 8% 5%;
+}
+
+.content-box p {
+  text-align: center;
+  font-size: 2em;
+}
+
+.card-box {
+  @apply flex;
+  @apply justify-evenly;
+  margin-top: 5%;
+}
+.card-box section {
+  @apply border;
+  @apply border-y-4;
+  @apply border-x-4;
+  @apply flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+  color: #f01a25;
+  font-size: 3em;
+  font-family: "Noto Sans JP";
+  font-weight: bold;
+}
+
+.hiragana-card-box {
+  @apply flex;
+  @apply justify-evenly;
+  margin-top: 1%;
+}
+
+.hiragana-card-box section {
+  @apply flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+  color: #f01a25;
+  font-size: 3em;
+  font-family: "Noto Sans JP";
+  font-weight: bold;
+}
+
+.list-box {
+  @apply flex;
+  @apply justify-normal;
+  width: 100%;
+  height: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.first-box {
+  @apply bg-red-500;
+  width: 35%;
+}
+.second-box {
+  @apply bg-white;
+  width: 45%;
+  color: red;
+}
+
+.second-box ul li {
+  color: red;
+  font-size: 2em;
+  text-align: center;
+  padding: 5%;
+  font-weight: bold;
+}
+.first-box h2 {
+  @apply text-center;
+  padding: 5% 10%;
+  color: white;
+  font-size: 5em;
+}
+
+.main-info-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.info-box {
+  width: 100%;
+  padding: 5%;
+  padding-right: 1%;
+  padding-left: 1%;
+}
+
+.info-box h2 {
+  color: red;
+  text-align: center;
+  position: relative;
+  display: inline-box;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.info-box h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px; /* Ajusta el grosor del underline según tus necesidades */
+  height: 2px; /* Ajusta el grosor del underline según tus necesidades */
+  background-color: red;
+}
+
+.left-info-box {
+  @apply bg-red-500;
+  width: 40%;
+}
+
+.left-info-box-header {
+  @apply bg-white;
+}
+
+.left-info-box section {
+}
+
+.left-info-box section h2 {
+  font-size: 3em;
+  text-align: center;
+  padding: 5%;
+  color: red;
+  font-weight: bold;
+}
+
+.left-info-box section button {
+  font-size: 3em;
+  padding: 4% 0;
+  margin: 8% 0;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  overflow: hidden; /* To hide both underlines at the beginning */
+}
+
+.left-info-box section button::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 5px;
+  background-color: white;
+  transition: width 0.5s ease;
+}
+
+.left-info-box section button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 5px;
+  background-color: white;
+  transition: width 0.5s ease;
+}
+
+.left-info-box section button:hover::before,
+.left-info-box section button:hover::after {
+  width: 100%;
+  transition: width 1s cubic-bezier(0, 0, 0.2, 1);
+}
+
+/*ANIMATIONS*/
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+img {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+
+  animation-timeline: --image;
+  animation-name: show;
+
+  animation-range: entry 25% cover 30%;
+  animation-fill-mode: both;
+}
+
+.animated {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+
+  animation-timeline: --image;
+  animation-name: show;
+
+  animation-range: entry 25% cover 30%;
+  animation-fill-mode: both;
+}
+
+

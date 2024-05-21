@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  font: roboto;
+  color: white;
+}
+
+body {
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: white;
+  /*background: url('./images/pattern(1).png') 50px repeat;*/
+}
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+.lesson-box{
+    @apply rounded-lg;
+    margin: 0 10%;
+    margin-top: 3%;
+    padding: 2%;
+    padding-left: 5%;
+    color: #d17d7d;
+    font-size: 3.5em;
+    transition: all 0.3s ease;
+
+}
+
+.lesson-box:hover{
+    @apply rounded-lg;
+    margin: 0 5%;
+    margin-top: 3%;
+    padding: 2%;
+    padding-left: 5%;
+    color: #d17d7d;
+    font-size: 3.5em;
+    border: 5px solid #db6565;
+    cursor: pointer;
+    z-index: 100000;
+
+}
+
+.strong-lesson-box-text{
+    color: #d17d7d;
+
+}
+
+.kana-box{
+    color: black;
+    font-size: 3em;
+}
+
+.description-box{
+    color: white;
+    font-size: 3em;
+    padding: 3%;
+    margin: 2% 5%;
+    text-align: center;
+}
+
+.description-box-2{
+    color: white;
+    font-size: 1em;
+    /* padding: 3%;
+    margin: 2% 5%; */
+    text-align: center;
+}

@@ -1,0 +1,17 @@
+.social-media{
+    @apply flex;
+    @apply justify-evenly;
+
+    padding: 0;
+    margin: 0;
+    margin-left: 70%;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+
+.login-box{
+    @apply rounded-xl;
+    @apply shadow-2xl;
+    padding: 1.5% 8%;
+    cursor: pointer;
+}
