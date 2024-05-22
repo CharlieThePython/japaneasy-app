@@ -1,4 +1,33 @@
-.kana-h1{
-    font-size: 3em;
+
+.main-study{
     color: black;
+    font-size: 2.5em;
+    margin-top: 5%;
+}
+
+.random-kana-section{
+    color: black;
+    font-size: 2.5em;
+}
+
+.section-textarea{
+    @apply rounded-xl;
+    color: black;
+    font-size: 1.5em;
+}
+
+.check-kana-button{
+    @apply rounded-xl;
+    color: black;
+    font-size: 0.8em;
+    padding: 1%;
+    margin-top: 2%;
+}
+
+.right-kana{
+    @apply bg-green-300;
+}
+
+.wrong-kana{
+    @apply bg-red-400;
 }
