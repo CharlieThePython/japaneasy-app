@@ -31,8 +31,7 @@ function PracticeKatakanaComponent() {
   <>
     <Link
       href={{
-        pathname: '/hiragana/practice-katakana/study',
-        query: { receivedData: JSON.stringify(receivedData) },
+        pathname: '/hiragana/practice/katakana/study',
       }}
       className="nav-link rounded-5"
       id="home-tab2"

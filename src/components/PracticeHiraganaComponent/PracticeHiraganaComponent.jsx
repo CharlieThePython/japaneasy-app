@@ -27,8 +27,7 @@ function PracticeHiraganaComponent() {
     <>
       <Link
         href={{
-          pathname: '/hiragana/practice/hiragana/study',
-          search: createQueryString(receivedData)
+          pathname: '/hiragana/practice/hiragana/study'
         }}
         className="nav-link rounded-5"
         id="home-tab2"

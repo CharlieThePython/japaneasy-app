@@ -23,7 +23,19 @@ export const hiraganaPracticeSymbols = [
     ['や', 'ゆ', 'よ'],
     ['わ', 'を', 'ん']
   ];
-  
+
+  export const katakanaPracticeSymbols = [
+    ['ア', 'イ', 'ウ', 'エ', 'オ'],
+    ['カ', 'キ', 'ク', 'ケ', 'コ'],
+    ['サ', 'シ', 'ス', 'セ', 'ソ'],
+    ['タ', 'チ', 'ツ', 'テ', 'ト'],
+    ['ナ', 'ニ', 'ヌ', 'ネ', 'ノ'],
+    ['ハ', 'ヒ', 'フ', 'ヘ', 'ホ'],
+    ['マ', 'ミ', 'ム', 'メ', 'モ'],
+    ['ラ', 'リ', 'ル', 'レ', 'ロ'],
+    ['ヤ', 'ユ', 'ヨ'],
+    ['ワ', 'ヲ', 'ン']
+  ];
 
 export const katakanaSymbols = [
     'ア', 'イ', 'ウ', 'エ', 'オ',
@@ -39,16 +51,16 @@ export const katakanaSymbols = [
   ];
 
   export const kanaTranslations = [
-    'a', 'i', 'u', 'e', 'o',
-    'ka', 'ki', 'ku', 'ke', 'ko',
-    'sa', 'shi', 'su', 'se', 'so',
-    'ta', 'chi', 'tsu', 'te', 'to',
-    'na', 'ni', 'nu', 'ne', 'no',
-    'ha', 'hi', 'fu', 'he', 'ho',
-    'ma', 'mi', 'mu', 'me', 'mo',
-    'ya', 'yu', 'yo',
-    'ra', 'ri', 'ru', 're', 'ro',
-    'wa', 'wo', 'n'
+    ['a', 'i', 'u', 'e', 'o'],
+    ['ka', 'ki', 'ku', 'ke', 'ko'],
+    ['sa', 'shi', 'su', 'se', 'so'],
+    ['ta', 'chi', 'tsu', 'te', 'to'],
+    ['na', 'ni', 'nu', 'ne', 'no'],
+    ['ha', 'hi', 'fu', 'he', 'ho'],
+    ['ma', 'mi', 'mu', 'me', 'mo'],
+    ['ya', 'yu', 'yo'],
+    ['ra', 'ri', 'ru', 're', 'ro'],
+    ['wa', 'wo', 'n']
   ];
 
 
