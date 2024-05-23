@@ -1,12 +1,12 @@
 'use client'
 
-import { hiraganaPracticeSymbols, hiraganaSymbols, kanaTranslations } from '@/src/kanas/kanas';
-import React, { useEffect, useRef, useState } from 'react';
+import { katakanaPracticeSymbols, kanaTranslations } from '@/src/kanas/kanas';
+import React, { useEffect, useState } from 'react';
 
 import '@/src/styles/Study.css'
 import { kanaRandomizer } from '@/src/kanaRandomizer/kanaRandomizer';
 
-function StudyHiraganaComponent() {
+function StudyKatakanaComponent() {
   const [receivedData, setReceivedData] = useState([]);
   const [currentRow, setCurrentRow] = useState(0);
   const [randomizedKanas, setRandomizedKanas] = useState([]);
@@ -74,7 +74,7 @@ function StudyHiraganaComponent() {
   console.log('kanaError.length',kanaError.length);
 
   const initializeRandomizedData = () => {
-    const filteredRows = hiraganaPracticeSymbols.filter((element, index) => receivedData.includes(index));
+    const filteredRows = katakanaPracticeSymbols.filter((element, index) => receivedData.includes(index));
     const filteredTranslations = kanaTranslations.filter((element, index) => receivedData.includes(index));
     const randomizedArray = kanaRandomizer(filteredRows, filteredTranslations);
     setRandomizedKanas(randomizedArray[0]);
@@ -102,6 +102,13 @@ function StudyHiraganaComponent() {
     <>
 
     <main className='main-study'>
+      <section className='correct-kana-section flex justify-evenly'>
+        <div className='bg-green-400 rounded-2xl p-2'>Right:</div>
+        <div className='bg-red-400 rounded-2xl p-2'>Wrong:</div>
+      </section>
+      <section className='correct-kana-section flex justify-center mt-4'>
+
+      </section>
     <section className='random-kana-section flex justify-center'>
         {receivedData.length > 0 && currentRow < randomizedKanas.length && (
           randomizedKanas[currentRow]
@@ -130,4 +137,4 @@ function StudyHiraganaComponent() {
   );
 }
 
-export default StudyHiraganaComponent;
+export default StudyKatakanaComponent;
