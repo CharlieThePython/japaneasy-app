@@ -22,7 +22,6 @@ function PracticeHiraganaComponent() {
 
   const rows = divideArrayIntoRows(hiraganaSymbols, 5);
   console.log(rows);
-
   return (
     <>
       <Link

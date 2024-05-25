@@ -12,6 +12,7 @@ function StudyHiraganaComponent() {
   const [randomizedKanas, setRandomizedKanas] = useState([]);
   const [kanaError, setKanaError] = useState([]);
   const [errorCounter, setErrorCounter] = useState(0);
+  const [rightCounter, setRightCounter] = useState(0);
   const [allCorrectFlag, setAllCorrectFlag] = useState(false);
   const [kanaIndex, setKanaIndex] = useState(0);
   const [randomizedTranslations, setRandomizedTranslations] = useState([])
@@ -43,9 +44,6 @@ function StudyHiraganaComponent() {
         setErrorCounter(prevCounter => prevCounter - 1);
         console.log('errorCounter',errorCounter)
         kanaValue.value = "";
-        if(errorCounter === 1){
-          setAllCorrectFlag(true);
-        }
       }else{
         console.log("WRONG KANA!");
       }
@@ -60,6 +58,7 @@ function StudyHiraganaComponent() {
 
     if (kanaInput === randomizedTranslations[currentRow] && currentRow < randomizedKanas.length) {
       console.log("RIGHT!");
+      setRightCounter(prevCounter => prevCounter + 1);
       setCurrentRow(prevRow => prevRow + 1);
     } else {
       console.log("WRONG!");
@@ -81,6 +80,14 @@ function StudyHiraganaComponent() {
     setRandomizedTranslations(randomizedArray[1]);
   };
 
+
+
+  useEffect(()=>{
+    if(currentRow === randomizedKanas.length && errorCounter === 0){
+      setAllCorrectFlag(true);
+    }
+  }
+  )
   useEffect(() => {
     if (receivedData.length > 0) {
       initializeRandomizedData();
@@ -102,6 +109,10 @@ function StudyHiraganaComponent() {
     <>
 
     <main className='main-study'>
+    <section className='correct-kana-section flex justify-evenly'>
+        <div className='bg-green-400 rounded-2xl p-2'>Right: {rightCounter}</div>
+        <div className='bg-red-400 rounded-2xl p-2'>Wrong: {errorCounter}</div>
+      </section>
     <section className='random-kana-section flex justify-center'>
         {receivedData.length > 0 && currentRow < randomizedKanas.length && (
           randomizedKanas[currentRow]
