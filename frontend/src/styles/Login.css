@@ -1,0 +1,195 @@
+.social-media {
+  @apply flex;
+  @apply justify-evenly;
+
+  padding: 0;
+  margin: 0;
+  margin-left: 70%;
+  margin-bottom: 2%;
+  margin-top: 1%;
+}
+
+.login-box {
+  @apply rounded-xl;
+  @apply shadow-2xl;
+  padding: 1.5% 8%;
+  cursor: pointer;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8% 8%;
+  margin-top: 1%;
+  transform: scale(0.8);
+}
+
+.error-message{
+  color: black;
+  font-size: 1.2em;
+  margin-top: 2%;
+}
+
+.login-input {
+  font-size: 1.5em;
+  width: 18em;
+  padding: 0.4em;
+  margin-top: 10%;
+  text-indent: 0.5em;
+  color: rgb(185, 63, 63);
+}
+
+.login-a {
+  color: rgb(78, 73, 73);
+  text-decoration: underline;
+  margin-top: 1em;
+}
+
+.login-h1 {
+  font-size: 3em;
+  font-weight: bolder;
+}
+
+.login-submit {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 1em;
+  padding: 2% 20%;
+  color: rgb(78, 73, 73);
+}
+
+.login-h2 {
+  font-size: 1.8em;
+  margin-bottom: 0.6em;
+}
+
+.profile-loading-section{
+  /* opacity: 0; */
+  transition: opacity 2s ease;
+}
+.visible{
+  opacity: 1;
+}
+.profile-section {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: rgb(61, 58, 58);
+  font-weight: bold;
+  font-size: 1.5em;
+  width: 5%;
+  height: 12%;
+  z-index: 1000000;
+}
+
+.profile-div {
+  max-width: 500px;
+  height: auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.profile-image {
+  width: 90%;
+  height: auto;
+  margin-top: 20%;
+  margin-left: 2%;
+  max-width: 500px;
+  transform: scale(1.5);
+
+  animation: none !important;
+  view-timeline-name: none !important;
+  view-timeline-axis: none !important;
+}
+
+/* Media Queries */
+
+/* Para iPad en orientación vertical */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .login-box {
+    padding: 2% 10%;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  .profile-div {
+    transform: scale(4);
+  }
+  .profile-image {
+    margin-left: 0.2em;
+    margin-top: 0.8em;
+  }
+}
+
+/* Para iPad en orientación horizontal */
+@media only screen and (min-width: 766px) and (max-width: 1024px) and (orientation: landscape) {
+  .login-box {
+    padding: 2% 10%;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  .profile-div {
+    transform: scale(2);
+  }
+  .profile-image {
+    margin-left: 0.3em;
+    margin-top: 0.3em;
+  }
+}
+
+/* Para iPad Air en orientación vertical */
+@media only screen and (min-width: 820px) and (max-width: 1180px) and (orientation: portrait) {
+  .login-box {
+    padding: 2% 10%;
+    cursor: pointer;
+    font-size: 0.8em;
+  }
+  .profile-div {
+    transform: scale(4);
+  }
+  .profile-image {
+    margin-left: 0.3em;
+    margin-top: 0.9em;
+  }
+}
+
+/* Para iPad Air en orientación horizontal */
+@media only screen and (min-width: 820px) and (max-width: 1180px) and (orientation: landscape) {
+  .login-box {
+    padding: 2% 10%;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  .profile-div {
+    transform: scale(2);
+  }
+  .profile-image {
+    margin-left: 0.3em;
+    margin-top: 0.3em;
+  }
+}
+
+/* Para iPhone 14 pro max en orientación vertical */
+@media only screen and (min-width: 430px) and (max-width: 932px) and (orientation: portrait) {
+    .social-media {
+        @apply flex;
+        @apply justify-evenly;
+      
+        padding: 0;
+        margin: 0;
+        margin-bottom: 2%;
+        margin-top: 1%;
+      }
+  .login-box {
+    padding: 2% 10%;
+    cursor: pointer;
+    font-size: 0.8em;
+  }
+  .profile-div {
+    transform: scale(4);
+  }
+  .profile-image {
+    margin-left: 0.3em;
+    margin-top: 0.9em;
+  }
+}

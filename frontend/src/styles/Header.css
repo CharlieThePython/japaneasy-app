@@ -1,0 +1,64 @@
+.main-header {
+  font-size: 2.5em;
+  width: auto;
+  margin: 0 5%;
+  padding: 1%;
+  color: white;
+  z-index: 1;
+}
+
+.main-logo {
+  margin: auto;
+}
+
+.main-header-h1 {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  opacity: 1;
+}
+
+.main-header-h2 {
+  padding-bottom: 2%;
+  color: rgb(245, 178, 178);
+  font-weight: bold;
+}
+
+/* Para iPad en orientación vertical */
+@media only screen and (min-width: 766px) and (max-width: 1024px) and (orientation: portrait) {
+  .main-header {
+    margin: 0 5%;
+    font-size: 2em;
+  }
+
+  .main-header-h1 {
+    font-size: 1.2em;
+  }
+}
+
+/* Para iPad en orientación horizontal */
+@media only screen and (min-width: 766px) and (max-width: 1024px) and (orientation: landscape) {
+  .main-header {
+    margin: 0 8%;
+    font-size: 2em;
+  }
+
+  .main-header-h1 {
+    font-size: 1.2em;
+  }
+}
+
+/* Para iPhone 14 pro max en orientación vertical */
+@media only screen and (min-width: 430px) and (max-width: 932px) and (orientation: portrait) {
+  .main-header {
+    margin: 0 2%;
+    font-size: 2em;
+  }
+
+  .main-header-h1 {
+    font-size: 1em;
+  }
+  .main-header-h2 {
+    font-size: 0.6em;
+  }
+}

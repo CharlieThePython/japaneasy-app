@@ -1,0 +1,125 @@
+.kana-table{
+    width: 70%;
+    margin-left: 6%;
+    margin-top: 2%;
+    color: red;
+}
+
+.kana-table-body{
+    font-size: 1em;
+    color: red;
+}
+
+.kana-table-body-tr{
+    font-size: 1em;
+    color: red;
+}
+
+.kana-table-body-td{
+    font-size: 3em;
+    color: red;
+    border: 5px solid;
+    text-align: center;
+}
+
+.checklist-form{
+    margin-top: 5%;
+    margin-bottom: 0;
+    margin-left: 10%;
+}
+
+.checklist{
+    display: flex;
+}
+
+.checklist-table{
+    margin: auto;
+}
+
+.checklist-td{
+    padding-bottom: 5em;
+}
+
+
+.checklist-td-input{
+    transform: scale(2.2);
+}
+
+.checklist-submit-button{
+    position: fixed;
+    top: 0;
+    left: 37%;
+    background-color:#1dfa58;
+    color: rgb(61, 58, 58);
+    font-weight: bold;
+    font-size: 1.5em;
+    width: 500px;
+    height: 100px;
+}
+
+#checklist-submit-button-id{
+    display: none;
+}
+
+.pop-animation {
+    animation-name: pop;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+  }
+  
+  @keyframes pop {
+    0% {
+      transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.2);
+      }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Media Queries */
+
+/* Para iPad en orientación vertical */
+@media only screen and (min-width: 766px) and (max-width: 1024px) and (orientation: portrait) {
+    .checklist-submit-button{
+        position: fixed;
+        top: 0;
+        left: 17%;
+        background-color:#1dfa58;
+        color: rgb(61, 58, 58);
+        font-weight: bold;
+        font-size: 1.5em;
+        width: 500px;
+        height: 100px;
+    }
+  }
+  
+  /* Para iPad en orientación horizontal */
+  @media only screen and (min-width: 766px) and (max-width: 1024px) and (orientation: landscape) {
+    .checklist-submit-button{
+        position: fixed;
+        top: 0;
+        left: 25%;
+        background-color:#1dfa58;
+        color: rgb(61, 58, 58);
+        font-weight: bold;
+        font-size: 1.5em;
+        width: 500px;
+        height: 100px;
+    }
+  }
+
+    /* Para iPad Air en orientación vertical */
+    @media only screen and (min-width: 820px) and (max-width: 1180px) and (orientation: portrait) {
+        .kana-table{
+            width: 75%;
+        }
+        
+      }
+      
+      /* Para iPad Air en orientación horizontal */
+      @media only screen and (min-width: 820px) and (max-width: 1180px) and (orientation: landscape) {
+
+      }

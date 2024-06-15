@@ -1,0 +1,182 @@
+.main-vocabulary-lesson-div{
+  transform: scale(0.8);
+}
+
+.vocabulary-div {
+  width: 500px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2% 7%;
+  font-size: 3em;
+  transition: 0.3s ease-in-out;
+}
+.vocabulary-section-row {
+  transform: scale(0.9);
+}
+#main-step-body-vocabulary {
+  padding: 3em;
+}
+
+.vocabulary-h1 {
+  color: black;
+  padding-top: 10%;
+  font-weight: 500;
+}
+
+.vocabulary-img {
+  width: 75%;
+  height: auto;
+}
+#kana-vocabulary-element {
+  font-size: 2em;
+}
+
+.vocabulary-div:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.description-box-title {
+  font-size: 2em;
+  color: blue;
+  text-align: center;
+}
+
+/* Para iPad en orientación vertical */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .vocabulary-div {
+    width: 40%;
+    padding: 4% 5%;
+    font-size: 2.2em;
+    margin: 2%;
+  }
+  .vocabulary-h1 {
+    display: none;
+  }
+
+  .vocabulary-img {
+    width: 70%;
+  }
+
+  .description-box-title {
+    font-size: 1.8em;
+  }
+  #kana-card-box {
+    padding: 15% 20%;
+  }
+  #kana-vocabulary-element {
+    font-size: 0.9em;
+  }
+}
+
+/* Para iPad en orientación horizontal */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .vocabulary-div {
+    width: 60%;
+    padding: 2% 3%;
+    font-size: 2.2em;
+    margin: 2%;
+  }
+
+  .vocabulary-img {
+    width: 40%;
+  }
+
+  .description-box-title {
+    font-size: 1.6em;
+  }
+}
+
+/* Para iPad Air en orientación vertical */
+@media only screen and (min-width: 820px) and (max-width: 1180px) and (orientation: portrait) {
+
+  .vocabulary-section-row {
+    margin-top: 0.2%;
+  }
+  .vocabulary-div {
+    width: 5%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2% 1%;
+    transition: 0.3s ease-in-out;
+  }
+  .vocabulary-img {
+    width: 32%;
+  }
+
+  .description-box{
+    transform: scale(0.8);
+  }
+
+  .description-box-title {
+    font-size: 1em;
+  }
+  #kana-card-box {
+    padding: 15% 25%;
+  }
+  #kana-vocabulary-element {
+    font-size: 1.2em;
+    padding: 0.2em 1.2em;
+  }
+}
+
+/* Para iPad Air en orientación horizontal */
+@media only screen and (min-width: 820px) and (max-width: 1180px) and (orientation: landscape) {
+  .vocabulary-div {
+    width: 50%;
+    padding: 2% 3%;
+    font-size: 2.2em;
+    margin: 1%;
+    margin-right: 4%;
+  }
+
+  .vocabulary-img {
+    width: 40%;
+  }
+
+  .description-box-title {
+    font-size: 1.6em;
+  }
+}
+
+  /* Para iPhone 14 pro max en orientación vertical */
+  @media only screen and (min-width: 430px) and (max-width: 932px) and (orientation: portrait) {
+    .big-header{
+      font-size: 1em;
+    }
+    .vocabulary-img {
+      transform: scale(0.8);
+    }
+    .vocabulary-section-row{
+      flex-direction: column;
+      align-items: center;
+    }
+    .vocabulary-div{
+      width: 80%;
+      margin-bottom: 10%;
+    }
+    #kana-card-box {
+      padding: 15% 25%;
+    }
+    #kana-vocabulary-element {
+      font-size: 1.2em;
+      padding: 0.2em 1.2em;
+    }
+  }
+
+    /* Para iPhone 14 pro max en orientación horizontal */
+    @media only screen and (min-width: 430px) and (max-width: 932px) and (orientation: landscape) {
+      .main-vocabulary-lesson-div{
+        transform: scale(0.9);
+        width: 100%;
+        margin-right: 10%;
+      }
+      .swiper-button-next{
+        margin-left: 10%;
+      }
+    }

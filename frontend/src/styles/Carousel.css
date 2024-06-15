@@ -1,0 +1,128 @@
+.slide {
+  color: black;
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.slide a div {
+  color: black;
+}
+
+.swiper-button-next, .swiper-button-prev{
+  --swiper-theme-color:  #ffffff;
+  font-weight: bolder;
+}
+
+#carrousel-swiper{
+  transform: scale(0.95);
+}
+.slide a div section h3 {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  padding-left: 2%;
+  top: 85%;
+  font-size: 3.2em;
+  z-index: 1000;
+}
+
+.mySwiper {
+  margin: 2% 20%;
+}
+
+/* MEDIA QUERIES */
+/* Para iPad en orientación vertical */
+@media only screen and (min-width: 766px) and (max-width: 1024px) and (orientation: portrait) {
+  .mySwiper {
+    margin: 5% 5%;
+  }
+
+  .slide a div section h3 {
+    font-size: 2em;
+  }
+}
+
+/* Para iPad en orientación horizontal */
+@media only screen and (min-width: 766px) and (max-width: 1024px) and (orientation: landscape) {
+  .mySwiper {
+    margin: 5% 8%;
+  }
+
+  .slide a div section h3 {
+    font-size: 2.6em;
+  }
+}
+
+  /* Para iPad Air en orientación vertical */
+  @media only screen and (min-width: 820px) and (max-width: 1180px) and (orientation: portrait) {
+    .mySwiper {
+      margin: 5% 8%;
+    }
+  
+    .slide a div section h3 {
+      font-size: 2em;
+    }
+  }
+  
+  /* Para iPad Air en orientación horizontal */
+  @media only screen and (min-width: 820px) and (max-width: 1180px) and (orientation: landscape) {
+    .mySwiper {
+      margin: 5% 8%;
+    }
+  
+    .slide a div section h3 {
+      font-size: 2.6em;
+    }
+  }
+
+  /* Para iPhone 14 pro max en orientación vertical */
+@media only screen and (min-width: 430px) and (max-width: 932px) and (orientation: portrait) {
+  .mySwiper {
+    margin: 5% 8%;
+  }
+
+  .slide a div section h3 {
+    font-size: 1.1em;
+  }
+  .swiper-button-next, .swiper-button-prev{
+    --swiper-theme-color:  #ffffff;
+    transform: scale(0.8);
+    font-weight: 100;
+  }
+}
+
+/* Para iPhone 14 pro max en orientación horizontal */
+@media only screen and (min-width: 430px) and (max-width: 932px) and (orientation: landscape) {
+  .mySwiper {
+    width: 72%;
+    margin-left: 14%;
+  }
+  .slide a div section h3 {
+    font-size: 1.9em;
+  }
+}
+
+  /* Para iPhone 14 pro max en orientación vertical */
+  @media only screen and (min-width: 430px) and (max-width: 932px) and (orientation: portrait) {
+    .mySwiper {
+      margin: 5% 8%;
+    }
+  
+    .slide a div section h3 {
+      font-size: 1.1em;
+    }
+    .swiper-button-next, .swiper-button-prev{
+      --swiper-theme-color:  #ffffff;
+      transform: scale(0.8);
+      font-weight: 100;
+    }
+  }
+  
+  /* Para otras pantallas de ordenador */
+  @media only screen and (min-width: 900px) and (max-width: 1440px) and (orientation: landscape) {
+    .slide a div section h3 {
+      font-size: 2.3em;
+    }
+  }

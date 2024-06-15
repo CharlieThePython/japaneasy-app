@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+
+.japanese-text {
+  font-family: "Noto Sans JP";
+  font-weight: bold;
+}
+.big-header {
+  margin: 4% 5%;
+  padding: 1.5%;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.content-box {
+  width: auto;
+  height: 10%;
+  margin-top: 5%;
+  padding: 8% 5%;
+}
+
+.content-box p {
+  text-align: center;
+  font-size: 2em;
+}
+
+.card-box {
+  @apply flex;
+  @apply justify-evenly;
+  margin-top: 2%;
+}
+.card-box section {
+  @apply border;
+  @apply border-y-4;
+  @apply border-x-4;
+  @apply flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5%;
+  color: #f01a25;
+  font-size: 3em;
+  font-family: "Noto Sans JP";
+  font-weight: bold;
+  transform: scale(0.9);
+}
+
+.hiragana-card-box {
+  @apply flex;
+  @apply justify-evenly;
+  margin-top: 1%;
+}
+
+.hiragana-card-box section {
+  @apply flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+  color: #f01a25;
+  font-size: 3em;
+  font-family: "Noto Sans JP";
+  font-weight: bold;
+}
+.kana-section-img {
+  transform: scale(0.9);
+}
+.list-box {
+  @apply flex;
+  @apply justify-normal;
+  width: 100%;
+  height: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.first-box {
+  @apply bg-red-500;
+  width: 35%;
+}
+.second-box {
+  @apply bg-white;
+  width: 45%;
+  color: #ee5a5a;
+  margin-left: 10%;
+}
+
+.second-box ul li {
+  color: #ee5a5a;
+  font-size: 2em;
+  text-align: center;
+  padding: 5%;
+  font-weight: bold;
+}
+.first-box h2 {
+  @apply text-center;
+  padding: 7% 10%;
+  color: white;
+  font-size: 5em;
+  font-weight: bolder;
+}
+
+.main-info-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.info-box {
+  width: 100%;
+  padding: 5%;
+  padding-right: 1%;
+  padding-left: 1%;
+}
+
+.info-box h2 {
+  color: #ee5a5a;
+  text-align: center;
+  position: relative;
+  display: inline-box;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.info-box h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px; /* Ajusta el grosor del underline según tus necesidades */
+  height: 2px; /* Ajusta el grosor del underline según tus necesidades */
+  background-color: #ee5a5a;
+}
+
+.left-info-box {
+  @apply bg-red-500;
+  width: 40%;
+}
+
+.left-info-box-header {
+  @apply bg-white;
+}
+
+.left-info-box section {
+}
+
+.left-info-box section h2 {
+  font-size: 3em;
+  text-align: center;
+  padding: 5%;
+  color: red;
+  font-weight: bold;
+}
+
+.left-info-box section .hiragana-link {
+  font-size: 3em;
+  padding: 4% 0;
+  margin: 8% 0;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  overflow: hidden; /* To hide both underlines at the beginning */
+}
+
+.left-info-box section .hiragana-link::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 5px;
+  background-color: white;
+  transition: width 0.5s ease;
+}
+
+.left-info-box section .hiragana-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 5px;
+  background-color: white;
+  transition: width 0.5s ease;
+}
+
+.left-info-box section .hiragana-link:hover::before,
+.left-info-box section .hiragana-link:hover::after {
+  width: 100%;
+  transition: width 1s cubic-bezier(0, 0, 0.2, 1);
+}
+
+/*ANIMATIONS*/
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+img {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+
+  animation-timeline: --image;
+  animation-name: show;
+
+  animation-range: entry 25% cover 30%;
+  animation-fill-mode: both;
+}
+
+.animated {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+
+  animation-timeline: --image;
+  animation-name: show;
+
+  animation-range: entry 25% cover 30%;
+  animation-fill-mode: both;
+}
+
+/* Media Queries */
+
+/* Para iPad en orientación vertical */
+@media only screen and (min-width: 766px) and (max-width: 1024px) and (orientation: portrait) {
+  .big-header {
+    margin: 0 5%;
+    margin-top: 4%;
+    padding: 2%;
+    font-size: 1.2em;
+  }
+  .content-box {
+    padding: 6% 4%;
+  }
+  .content-box p {
+    font-size: 1em;
+  }
+
+  .card-box {
+    margin: 5%;
+  }
+
+  .card-box section {
+    padding: 5.5%;
+    margin: 1%;
+    font-size: 2em;
+  }
+  .hiragana-card-box {
+    margin-top: 8%;
+  }
+  .hiragana-card-box section {
+    font-size: 2em;
+    padding-top: 0;
+  }
+  .hiragana-card-box section img {
+    width: 60%;
+  }
+  .second-box {
+    margin-left: 10%;
+  }
+  .higher-image {
+    transform: scale(0.7);
+  }
+  .list-box {
+    margin-top: 8%;
+    margin-bottom: 8%;
+  }
+  .main-info-box {
+    margin-top: 3%;
+  }
+  .first-box h2 {
+    padding: 20%;
+    font-size: 2em;
+  }
+  .second-box ul li {
+    font-size: 1.8em;
+  }
+  .info-box h2 {
+    font-size: 2em;
+  }
+  .left-info-box section h2 {
+    font-size: 1.8em;
+  }
+
+  .button-box {
+    font-size: 0.5em;
+  }
+}
+
+/* Para iPad en orientación horizontal */
+@media only screen and (min-width: 766px) and (max-width: 1024px) and (orientation: landscape) {
+  .big-header {
+    margin: 0 6%;
+    margin-top: 3.5%;
+    padding: 1.5%;
+    font-size: 1.7em;
+  }
+  .content-box {
+    padding: 7% 4.5%;
+  }
+  .content-box p {
+    font-size: 1em;
+  }
+  .card-box {
+    margin: 5%;
+  }
+
+  .card-box section {
+    padding: 5.5%;
+    margin: 1%;
+    font-size: 2em;
+  }
+  .higher-image {
+    transform: scale(0.6);
+  }
+  .list-box {
+    margin-top: 9%;
+    margin-bottom: 9%;
+  }
+  .first-box h2 {
+    padding: 20%;
+    font-size: 2em;
+    font-weight: bolder;
+  }
+  .second-box ul li {
+    font-size: 1.9em;
+  }
+  .second-box {
+    margin-left: 10%;
+  }
+  .info-box h2 {
+    font-size: 1.9em;
+  }
+
+  .left-info-box-header {
+    font-size: 0.8em;
+  }
+  .left-info-box section h2 {
+    font-size: 2.9em;
+  }
+  .left-info-box section .hiragana-link {
+    font-size: 2.9em;
+  }
+  .button-box {
+    font-size: 0.5em;
+  }
+}
+
+/* Para iPad Air en orientación vertical */
+@media only screen and (min-width: 820px) and (max-width: 1180px) and (orientation: portrait) {
+  .content-box {
+    font-size: 1.6em;
+    margin-top: 2%;
+    padding: 10% 7%;
+  }
+  .hiragana-card-box section {
+    margin: 0.5%;
+    font-size: 2em;
+  }
+  .hiragana-card-box section img {
+    width: 60%;
+  }
+  .higher-image {
+    transform: scale(0.6);
+  }
+}
+
+/* Para iPad Air en orientación horizontal */
+@media only screen and (min-width: 820px) and (max-width: 1180px) and (orientation: landscape) {
+  .card-box {
+    transform: scale(0.8);
+  }
+  .content-box {
+    font-size: 0.6em;
+    margin-top: 2%;
+    padding: 8% 6%;
+  }
+  .hiragana-card-box section {
+    margin: 0.5%;
+    font-size: 2em;
+  }
+  .higher-image {
+    transform: scale(0.6);
+  }
+  .first-box h2 {
+    font-size: 2.5em;
+    margin-top: 15%;
+  }
+  .info-box h2 {
+    font-size: 1.9em;
+  }
+
+  .left-info-box-header {
+    font-size: 1em;
+  }
+  .left-info-box section h2 {
+    font-size: 2.5em;
+  }
+  .left-info-box section {
+    font-size: 0.8em;
+  }
+}
+
+/* Para iPhone 14 pro max en orientación vertical */
+@media only screen and (min-width: 430px) and (max-width: 932px) and (orientation: portrait) {
+  .big-header {
+    font-size: 1em;
+  }
+  .content-box p {
+    font-size: 1em;
+    margin-top: 2%;
+    padding: 10% 7%;
+  }
+  .card-box section {
+    margin: 0.5%;
+    font-size: 1em;
+  }
+  .hiragana-card-box section {
+    font-size: 0.8em;
+  }
+  .first-box {
+    display: none;
+  }
+  .list-box {
+    margin-left: 15%;
+  }
+  .list-box ul li {
+    padding: 20%;
+  }
+  .hiragana-card-box section img {
+    width: 50%;
+  }
+  .higher-image {
+    transform: scale(0.6);
+  }
+  .list-box {
+    margin-top: 8%;
+    margin-bottom: 8%;
+  }
+  .main-info-box {
+    margin-top: 3%;
+  }
+  .first-box h2 {
+    padding: 20%;
+    font-size: 2em;
+  }
+  .second-box ul li {
+    font-size: 1.8em;
+  }
+  .info-box h2 {
+    font-size: 2em;
+  }
+  .left-info-box section h2 {
+    font-size: 1.8em;
+  }
+
+  .button-box {
+    font-size: 0.5em;
+  }
+  .info-box h2 {
+    font-size: 1.3em;
+  }
+}
+
+/* Para iPhone 14 pro max en orientación vertical */
+@media only screen and (min-width: 430px) and (max-width: 932px) and (orientation: landscape) {
+  .card-box {
+    transform: scale(0.8);
+  }
+  .content-box {
+    font-size: 1.2em;
+    margin-top: 2%;
+    padding: 8% 6%;
+  }
+  .hiragana-card-box section {
+    margin: 0.5%;
+    font-size: 2em;
+  }
+  .higher-image {
+    transform: scale(0.6);
+  }
+  .first-box h2 {
+    font-size: 2em;
+    margin-top: 1%;
+  }
+  .info-box h2 {
+    font-size: 1.9em;
+  }
+
+  .left-info-box-header {
+    font-size: 1em;
+  }
+  .left-info-box section h2 {
+    font-size: 2.2em;
+  }
+  .left-info-box section {
+    font-size: 0.5em;
+  }
+  
+}

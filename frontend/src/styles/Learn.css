@@ -1,0 +1,132 @@
+.lesson-box{
+    @apply rounded-lg;
+    margin: 0 10%;
+    margin-top: 1.2%;
+    padding: 2%;
+    padding-left: 5%;
+    color: #d17d7d;
+    font-size: 3.5em;
+    border: 5px solid rgb(223, 179, 179);
+    transition: transform 0.5s ease-in-out;
+    transform: scale(0.9);
+
+}
+.main-step-body{
+  transform: scale(0.8);
+  padding: 1%;
+}
+.lesson-box:hover{
+    @apply rounded-lg;
+    transform: scale(1);
+    transition-duration: 0.4s;
+    color: #d17d7d;
+    font-size: 3.5em;
+    border: 5px solid #db6565;
+    cursor: pointer;
+
+}
+
+.strong-lesson-box-text{
+    color: #d17d7d;
+
+}
+
+.kana-box{
+    color: black;
+    font-size: 3em;
+}
+
+.description-box{
+    color: white;
+    font-size: 3em;
+    padding: 3%;
+    margin: 2% 5%;
+    text-align: center;
+}
+
+.description-box-2{
+    color: white;
+    font-size: 1em;
+    /* padding: 3%;
+    margin: 2% 5%; */
+    text-align: center;
+}
+
+  /*MEDIA QUERIES*/
+/* Para iPad en orientación vertical */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .card-box {
+        transform: scale(0.9);
+        margin: 0.01% 0;
+        padding: 0.5% 1%;
+      }
+    .card-box img {
+      transform: scale(0.9);
+      margin-left: 0.5em;
+    }
+    .card-box section{
+      margin: 0.4em;
+      padding: 0.5em 0.1em;
+      font-size: 2.5em;
+    }
+    .lesson-box{
+      font-size: 2em;
+      transition: transform 0.5s ease-in-out;
+    }
+    .lesson-box:hover{
+        transform: scale(1.1);
+        transition-duration: 0.4s;
+        font-size: 2.1em;
+    }
+  }
+  
+  /* Para iPad en orientación horizontal */
+  @media only screen and (min-width: 766px) and (max-width: 1024px) and (orientation: landscape) {
+    .card-box {
+      transform: scale(0.9);
+      margin: 0.1% 0;
+      padding: 0.5% 1%;
+    }
+    .lesson-box{
+      font-size: 2em;
+      transition: transform 0.5s ease-in-out;
+    }
+    .lesson-box:hover{
+        transform: scale(1.1);
+        transition-duration: 0.4s;
+        font-size: 2.1em;
+    }
+  }
+  /* Para iPad Air en orientación vertical */
+  @media only screen and (min-width: 820px) and (max-width: 1180px) and (orientation: portrait) {
+    .card-box section{
+      transform: scale(0.7);
+      margin: 0.01% 0;
+      padding: 0.5% 1%;
+    }
+  }
+    /* Para iPad Air en orientación horizontal */
+    @media only screen and (min-width: 820px) and (max-width: 1180px) and (orientation: landscape) {
+      .description-box{
+        font-size: 1.5em;
+        padding: 5% 2%;
+        margin-bottom: 3%;
+        margin-top: 2%;
+      }
+      .main-step-body{
+        transform: scale(0.9);
+        padding: 0.4%;
+      }
+      :root {
+        --swiper-navigation-size: 68px;
+      }
+      .kana-card-box{
+        padding: 1em;
+        margin: 0;
+      }
+      .kana-box{
+        font-size: 1.9em;
+        font-weight: bolder;
+        margin-bottom: 0;
+      }
+    }
