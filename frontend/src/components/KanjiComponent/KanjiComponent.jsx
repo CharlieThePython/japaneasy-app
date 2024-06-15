@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useEffect, useState } from "react";
 import "../../styles/Hiragana.css";
@@ -20,9 +20,7 @@ import NokenSection from "../Global/NokenSection";
 
 function KanjiComponent() {
   const [selectedSection, setSelectedSection] = useState(null);
-
   const handleClick = (sectionId) => {
-
     setSelectedSection(sectionId);
     document.getElementById("n5-section").style.display = "none";
     document.getElementById("n4-section").style.display = "none";
@@ -33,7 +31,6 @@ function KanjiComponent() {
     // Mostrar la sección correspondiente
     document.getElementById(`${sectionId}-section`).style.display = "block";
   };
-
 
   return (
     <>
@@ -78,7 +75,7 @@ function KanjiComponent() {
           characters and used in the Japanese writing system.
           <br />
           Each <b>Kanji</b> character represents a concept, idea or word.
-          <b>Kanji</b> characters can be quite complex, as each character has
+          <b> Kanji</b> characters can be quite complex, as each character has
           its own unique shape and meaning. Learning <b>Kanji</b> is essential
           for reading and writing in Japanese, as they are used for nouns, stems
           of adjectives and verbs, and to express complex ideas.
@@ -90,16 +87,30 @@ function KanjiComponent() {
         TWO READINGS, ONE CONCEPT
       </h1>
       <div className="card-box animated">
-        <section>
-          <img width="50%" height="auto" src={girl.src} />
+        <section className="hover-box">
+          <img width="50%" height="auto" src={girl.src} alt="Girl" />
           ONYOMI
+          <div className="overlay">
+            <p>
+              Sino-Japanese reading of Kanji characters, primarily used in more
+              formal contexts and in character combinations.
+            </p>
+          </div>
         </section>
-        <section>
-          <img width="50%" height="auto" src={ninja.src} />
+        <section className="hover-box">
+          <img width="50%" height="auto" src={ninja.src} alt="Ninja" />
           KUNYOMI
+          <div className="overlay">
+            <p>
+              Native Japanese reading of Kanji characters, often employed in
+              names and commonly used words in daily conversation. Typically preferred for its simplicity and familiarity.
+            </p>
+          </div>
         </section>
       </div>
-      <h1 className="big-header bg-red-500 rounded-r-full shadow-xl">KANJI LEVELS</h1>
+      <h1 className="big-header bg-red-500 rounded-r-full shadow-xl">
+        KANJI LEVELS
+      </h1>
       <div className="animated no-border-card-box ">
         <div className="hiragana-card-box animated">
           <section
@@ -234,5 +245,3 @@ function KanjiComponent() {
 }
 
 export default KanjiComponent;
-
-

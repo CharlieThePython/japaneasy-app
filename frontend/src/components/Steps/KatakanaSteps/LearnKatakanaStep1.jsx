@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { katakanaMapStep1 } from "../../../kanas/kanas";
 
@@ -17,9 +17,9 @@ import "../../../styles/LearnHiragana.css";
 import { Pagination, Navigation } from "swiper/modules";
 
 function LearnKatakanaStep1() {
-
+  scroll(0, 0);
   return (
-    <div>
+    <div  className="main-step-body">
       <Swiper
         spaceBetween={1}
         pagination={{
@@ -34,7 +34,7 @@ function LearnKatakanaStep1() {
           <SwiperSlide key={index}>
             <div>
               <div className="card-box animated">
-              <section id="kana-card-box">
+                <section id="kana-card-box">
                   <div className="kana-box card-box">
                     {element.character[0]}
                   </div>

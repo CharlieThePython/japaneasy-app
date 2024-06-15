@@ -120,7 +120,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "vocabulary/:id",  // Esta es la parte clave: :id indica un parámetro dinámico en la ruta
+    path: "vocabulary/:id", // Esta es la parte clave: :id indica un parámetro dinámico en la ruta
     element: <DynamicVocabulary />,
     errorElement: <ErrorPage />,
   },
@@ -143,4 +143,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Footer />
   </React.StrictMode>
 );
-

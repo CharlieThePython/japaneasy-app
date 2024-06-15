@@ -1,0 +1,200 @@
+.profile-page-div{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+}
+
+.profile-page-section{
+    width: 40%;
+    height: 50vh;
+    margin-top: 5%;
+    /* opacity: 0; */
+    transition: opacity 0.5s ease;
+}
+
+.profile-page-text-section{
+    width: 100%;
+    display: flex;
+    margin-top: 4%;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 3em;
+    flex-direction: column;
+}
+
+.profile-page-button-section{
+    width: 100%;
+    display: flex;
+    margin-top: 1%;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2em;
+    flex-direction: column;
+}
+.profile-page-button-section:hover{
+    color: rgb(197, 235, 248);
+}
+
+.profile-page-image-section{
+    display: flex;
+    width: 100%;
+    margin-top: 8%;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+}
+
+.profile-page-image{
+    border: 0.3em solid black;
+    background-color: rgb(255, 255, 255);
+
+}
+.profile-page-section {
+  width: 40%;
+  height: 50vh;
+  margin-top: 5%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* .profile-page-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+
+.user-email {
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+/* .user-email.visible {
+  opacity: 1;
+} */
+
+/*MODAL*/
+
+.modal-overlay {
+    position: fixed;
+    color: black;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+  }
+  
+  .modal-close-button {
+    position: absolute;
+    background-color: black;
+    font-weight: bolder;
+    top: 5px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .modal-image {
+    max-width: 210px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid black;
+    margin: 0 5%;
+  }
+
+  .modal-image:hover{
+    cursor: pointer;
+  }
+
+  .profile-text-input{
+    color: black;
+  }
+
+  .user-email{
+    font-size: 0.5em;
+    color: aliceblue;
+    /* opacity: 0; */
+    transition: opacity 0.5s ease;
+  }
+
+  .profile-h1{
+    font-size: 0.8em;
+    margin-bottom: 2%;
+  }
+
+  .visible {
+    opacity: 1;
+  }
+
+  /* Media Queries */
+
+/* Para iPad en orientación vertical */
+@media only screen and (min-width: 766px) and (max-width: 1024px) and (orientation: portrait) {
+  .profile-page-section{
+    transform: scale(0.9);
+    width: 70%;
+    height: 40vh;
+    margin-top: 5%;
+}
+.modal-content {
+  transform: scale(0.9);
+}
+}
+
+/* Para iPad en orientación horizontal */
+@media only screen and (min-width: 766px) and (max-width: 1024px) and (orientation: landscape) {
+  .profile-page-section{
+    transform: scale(0.9);
+    width: 55%;
+    height: 52vh;
+    margin-top: 5%;
+}
+.modal-content {
+  transform: scale(0.8);
+}
+}
+
+  /* Para iPad Air en orientación vertical */
+  @media only screen and (min-width: 820px) and (max-width: 1180px) and (orientation: portrait) {
+  .modal-content {
+    transform: scale(0.8);
+  }
+  }
+  
+  /* Para iPad Air en orientación horizontal */
+  @media only screen and (min-width: 820px) and (max-width: 1180px) and (orientation: landscape) {
+    .login-box{
+        padding: 2% 10%;
+        cursor: pointer;
+        font-size: 0.9em;
+    }
+    .profile-div {
+        transform: scale(2);
+    }
+    .profile-image {
+        margin-left: 0.3em;
+        margin-top: 0.3em;
+    }
+  }
+

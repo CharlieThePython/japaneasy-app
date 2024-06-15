@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { katakanaMapStep3 } from "../../../kanas/kanas";
 // Import Swiper React components
@@ -15,10 +15,10 @@ import "../../../styles/LearnHiragana.css";
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
 
-
 function LearnKatakanaStep3() {
+  scroll(0, 0);
   return (
-    <div>
+    <div  className="main-step-body">
       <Swiper
         spaceBetween={1}
         pagination={{

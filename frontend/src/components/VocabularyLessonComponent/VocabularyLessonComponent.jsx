@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { vocabularyData } from "@/src/vocabularySections/vocabularyData";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,18 +15,17 @@ import "../../styles/Vocabulary.css";
 import "../../styles/Learn.css";
 import "@/src/styles/Hiragana.css";
 
-function VocabularyLessonComponent({name}) {
-
-  console.log(name)
+function VocabularyLessonComponent({ name }) {
+  scroll(0, 0);
+  // console.log(name);
   // Obtiene el array de items del JSON
   const dataSet = vocabularyData.find((item) => item.key === name);
   const vocabulary = dataSet ? dataSet.value : [];
-  console.log('vocabulary',vocabulary)
-  console.log("dataSet", dataSet ? dataSet.value : "Data not found");
-
+  // console.log("vocabulary", vocabulary);
+  // console.log("dataSet", dataSet ? dataSet.value : "Data not found");
 
   return (
-    <>
+    <div className="main-vocabulary-lesson-div">
       <Swiper
         spaceBetween={1}
         pagination={{
@@ -35,14 +34,20 @@ function VocabularyLessonComponent({name}) {
         navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper2"
+        id="main-step-body-vocabulary"
         loop
       >
         {vocabulary.map((element, index) => (
           <SwiperSlide key={index}>
             <div>
-              <div className="card-box animated">
+              <div className="card-box">
                 <section id="kana-card-box">
-                  <div className="kana-box card-box">{element.kanji}</div>
+                  <div
+                    className="kana-box card-box"
+                    id="kana-vocabulary-element"
+                  >
+                    {element.kanji}
+                  </div>
                   <span className="small-text">{element.hiragana}</span>
                 </section>
               </div>
@@ -53,7 +58,7 @@ function VocabularyLessonComponent({name}) {
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 }
 

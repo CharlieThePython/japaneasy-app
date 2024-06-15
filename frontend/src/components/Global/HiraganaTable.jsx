@@ -1,8 +1,6 @@
 import { hiraganaSymbols } from "@/src/kanas/kanas";
 import "../../styles/PracticeHiragana.css";
 
-
-
 const HiraganaTable = () => {
   const symbolsPerRow = 5;
   const yoIndex = hiraganaSymbols.indexOf("よ");

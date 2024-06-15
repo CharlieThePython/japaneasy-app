@@ -1,6 +1,6 @@
 .mySwiper2{
     width: auto;
-    margin: 1% 2%;
+    margin: 0.2% 2%;
   }
   
   :root {
@@ -36,5 +36,127 @@
   }
 
   #kana-card-box{
-    padding: 0.5% 3%;
+    padding: 2% 10%;
+  }
+
+/* Media Queries */
+
+/* Para iPad en orientación vertical */
+@media only screen and (min-width: 766px) and (max-width: 1024px) and (orientation: portrait) {
+  .mySwiper2{
+    width: auto;
+    margin: 2% 2%;
+  }
+  :root {
+    --swiper-navigation-size: 30px;
+  }
+  .card-box{
+    margin-bottom: 0;
+  }
+  .kana-card-box{
+    margin-bottom: 0.2%;
+  }
+  .small-text{
+    font-size: 100%;
+    color: #f73636;
+    font-weight: bold;
+  }
+  .swiper-container .mySwiper2 {
+    height: 300px;
+    width: 100%;
+  }
+  .description-box{
+    font-size: 1.8em;
+    padding: 5%;
+    margin-top: 0;
+  }
+}
+
+/* Para iPad en orientación horizontal */
+@media only screen and (min-width: 766px) and (max-width: 1024px) and (orientation: landscape) {
+  .small-text{
+    font-size: 1.2em;
+    color: #f73636;
+    font-weight: bold;
+    margin-top: 0;
+  }
+  .kana-card-box{
+    padding: 5em;
+    margin: 0;
+  }
+  .kana-box{
+    font-size: 3.9em;
+    font-weight: bolder;
+    margin-bottom: 0;
+  }
+  :root {
+    --swiper-navigation-size: 45px;
+  }
+  .description-box{
+    font-size: 1.5em;
+    padding: 5% 0;
+    margin-bottom: 8%;
+  }
+}
+
+  /* Para iPad Air en orientación vertical */
+  @media only screen and (min-width: 820px) and (max-width: 1180px) and (orientation: portrait) {
+    .card-box {
+      transform: scale(0.9);
+      margin: 0.01% 0;
+      padding: 0.5% 1%;
+    }
+    .card-box img {
+      transform: scale(0.8);
+      margin-left: 0.5em;
+    }
+    .card-box section{
+      margin: 0.4em;
+      padding: 0.5em 0.1em;
+      font-size: 2.5em;
+    }
+    .description-box{
+      font-size: 1.8em;
+      padding: 5% 7%;
+      margin-bottom: 1%;
+    }
+    .main-step-body{
+      transform: scale(0.9);
+      padding: 0.5%;
+    }
+    .mySwiper2 .swiper-button-next, .swiper-button-prev{
+      margin: 10% 0;
+      --swiper-theme-color:  #f73636;
+      font-weight: bolder;
+    }
+    .mySwiper2 .swiper-button-prev{
+      margin: 10% 0;
+      --swiper-theme-color:  #f73636;
+    }
+  }
+  
+  /* Para iPad Air en orientación horizontal */
+  @media only screen and (min-width: 820px) and (max-width: 1180px) and (orientation: landscape) {
+    .description-box{
+      font-size: 1.5em;
+      padding: 5% 2%;
+      margin-bottom: 3%;
+      margin-top: 2%;
+    }
+    .main-step-body{
+      transform: scale(0.9);
+      padding: 0.4%;
+    }
+    :root {
+      --swiper-navigation-size: 68px;
+    }
+    .kana-card-box{
+      padding: 1em;
+      margin: 0;
+    }
+    .kana-box{
+      font-size: 1.9em;
+      font-weight: bolder;
+      margin-bottom: 0;
+    }
   }

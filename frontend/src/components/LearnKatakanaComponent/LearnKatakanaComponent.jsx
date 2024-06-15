@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { hiraganaSymbols } from "../../kanas/kanas";
 
 import "../../styles/Learn.css";
@@ -6,10 +6,10 @@ import "@/src/styles/Hiragana.css";
 
 //IMAGES
 import katakanaGoblin from "../../images/hiragana/learn-katakana/orc.png";
-import { kanaTranslate } from "../../kanas/LearnFunctions";
 import Link from "next/link";
 
 function LearnKatakanaComponent() {
+  scroll(0, 0);
   return (
     <>
       <h1 className="big-header bg-red-500 rounded-r-full">
@@ -30,24 +30,39 @@ function LearnKatakanaComponent() {
       <h1 className="big-header bg-red-500 rounded-r-full">
         AVAILABLE LESSONS
       </h1>
-      <Link href="/hiragana/learn/katakana/steps/step-1" className="nav-link rounded-5" id="home-tab2" aria-selected="true">
-      <div className="lesson-box bg-yellow-100 rounded-lg shadow-xl">
-        KATAKANA:&nbsp;STEP 1&nbsp;|&nbsp;
-        <b className="strong-lesson-box-text">ア/カ/サ/タ</b>
-      </div>
-    </Link>
-    <Link href="/hiragana/learn/katakana/steps/step-2" className="nav-link rounded-5" id="home-tab2" aria-selected="true">
-      <div className="lesson-box bg-yellow-100 rounded-lg shadow-xl">
-        KATAKANA:&nbsp;STEP 2&nbsp;|&nbsp;
-        <b className="strong-lesson-box-text">ナ/ハ/マ/ラ</b>
-      </div>
-    </Link>
-    <Link href="/hiragana/learn/katakana/steps/step-3" className="nav-link rounded-5" id="home-tab2" aria-selected="true">
-      <div className="lesson-box bg-yellow-100 rounded-lg shadow-xl">
-        KATAKANA:&nbsp;STEP 3&nbsp;|&nbsp;
-        <b className="strong-lesson-box-text">ヤ/ワ</b>
-      </div>
-    </Link>
+      <Link
+        href="/hiragana/learn/katakana/steps/step-1"
+        className="nav-link rounded-5"
+        id="home-tab2"
+        aria-selected="true"
+      >
+        <div className="lesson-box bg-yellow-100 rounded-lg shadow-xl">
+          KATAKANA:&nbsp;STEP 1&nbsp;|&nbsp;
+          <b className="strong-lesson-box-text">ア/カ/サ/タ</b>
+        </div>
+      </Link>
+      <Link
+        href="/hiragana/learn/katakana/steps/step-2"
+        className="nav-link rounded-5"
+        id="home-tab2"
+        aria-selected="true"
+      >
+        <div className="lesson-box bg-yellow-100 rounded-lg shadow-xl">
+          KATAKANA:&nbsp;STEP 2&nbsp;|&nbsp;
+          <b className="strong-lesson-box-text">ナ/ハ/マ/ラ</b>
+        </div>
+      </Link>
+      <Link
+        href="/hiragana/learn/katakana/steps/step-3"
+        className="nav-link rounded-5"
+        id="home-tab2"
+        aria-selected="true"
+      >
+        <div className="lesson-box bg-yellow-100 rounded-lg shadow-xl">
+          KATAKANA:&nbsp;STEP 3&nbsp;|&nbsp;
+          <b className="strong-lesson-box-text">ヤ/ワ</b>
+        </div>
+      </Link>
     </>
   );
 }

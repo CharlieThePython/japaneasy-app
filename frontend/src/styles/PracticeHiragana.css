@@ -49,8 +49,10 @@
     position: fixed;
     top: 0;
     left: 37%;
-    background-color:#12de49;
-    font-size: 2em;
+    background-color:#1dfa58;
+    color: rgb(61, 58, 58);
+    font-weight: bold;
+    font-size: 1.5em;
     width: 500px;
     height: 100px;
 }
@@ -76,3 +78,48 @@
       transform: scale(1);
     }
   }
+
+  /* Media Queries */
+
+/* Para iPad en orientación vertical */
+@media only screen and (min-width: 766px) and (max-width: 1024px) and (orientation: portrait) {
+    .checklist-submit-button{
+        position: fixed;
+        top: 0;
+        left: 17%;
+        background-color:#1dfa58;
+        color: rgb(61, 58, 58);
+        font-weight: bold;
+        font-size: 1.5em;
+        width: 500px;
+        height: 100px;
+    }
+  }
+  
+  /* Para iPad en orientación horizontal */
+  @media only screen and (min-width: 766px) and (max-width: 1024px) and (orientation: landscape) {
+    .checklist-submit-button{
+        position: fixed;
+        top: 0;
+        left: 25%;
+        background-color:#1dfa58;
+        color: rgb(61, 58, 58);
+        font-weight: bold;
+        font-size: 1.5em;
+        width: 500px;
+        height: 100px;
+    }
+  }
+
+    /* Para iPad Air en orientación vertical */
+    @media only screen and (min-width: 820px) and (max-width: 1180px) and (orientation: portrait) {
+        .kana-table{
+            width: 75%;
+        }
+        
+      }
+      
+      /* Para iPad Air en orientación horizontal */
+      @media only screen and (min-width: 820px) and (max-width: 1180px) and (orientation: landscape) {
+
+      }

@@ -58,8 +58,8 @@ export const katakanaSymbols = [
     ['na', 'ni', 'nu', 'ne', 'no'],
     ['ha', 'hi', 'fu', 'he', 'ho'],
     ['ma', 'mi', 'mu', 'me', 'mo'],
-    ['ya', 'yu', 'yo'],
     ['ra', 'ri', 'ru', 're', 'ro'],
+    ['ya', 'yu', 'yo'],
     ['wa', 'wo', 'n']
   ];
 

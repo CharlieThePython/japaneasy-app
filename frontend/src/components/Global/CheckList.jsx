@@ -1,21 +1,18 @@
-'use client'
+"use client";
 import { useEffect, useState } from "react";
-
 
 function CheckList({ setReceivedData }) {
   const [checkedIndices, setCheckedIndices] = useState([]);
 
-  useEffect(()=>{
+  useEffect(() => {
     if (checkedIndices.length > 0) {
       document.getElementById("checklist-submit-button-id").style.display =
         "block";
-    }else{
+    } else {
       document.getElementById("checklist-submit-button-id").style.display =
-      "none";
+        "none";
     }
-  }
-  )
-
+  });
 
   const handleCheckboxChange = (index) => {
     const currentIndex = checkedIndices.indexOf(index);
@@ -28,12 +25,13 @@ function CheckList({ setReceivedData }) {
       newIndices = checkedIndices.filter((i) => i !== index);
     }
     setCheckedIndices(newIndices);
-    localStorage.setItem('receivedData', JSON.stringify(newIndices));
+    localStorage.setItem("receivedData", JSON.stringify(newIndices));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Índices de los checkboxes marcados:", checkedIndices);
+    //Para modo dev:
+    // console.log("Índices de los checkboxes marcados:", checkedIndices);
     setReceivedData(checkedIndices);
   };
 
@@ -56,7 +54,12 @@ function CheckList({ setReceivedData }) {
   }
 
   return (
-    <form id="checklist-form-id" className="checklist-form" onSubmit={handleSubmit} action=''>
+    <form
+      id="checklist-form-id"
+      className="checklist-form"
+      onSubmit={handleSubmit}
+      action=""
+    >
       <table className="checklist">
         <tbody className="checklist-table">{checkboxes}</tbody>
       </table>

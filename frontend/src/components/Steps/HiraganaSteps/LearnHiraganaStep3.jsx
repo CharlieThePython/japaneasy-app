@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { hiraganaMapStep3 } from "../../../kanas/kanas";
 // Import Swiper React components
@@ -16,9 +16,9 @@ import "../../../styles/LearnHiragana.css";
 import { Pagination, Navigation } from "swiper/modules";
 
 function LearnHiraganaStep3() {
-
+  scroll(0, 0);
   return (
-    <div>
+    <div  className="main-step-body">
       <Swiper
         spaceBetween={50}
         pagination={{
@@ -33,7 +33,7 @@ function LearnHiraganaStep3() {
           <SwiperSlide key={index}>
             <div>
               <div className="card-box animated">
-              <section id="kana-card-box">
+                <section id="kana-card-box">
                   <div className="kana-box card-box">
                     {element.character[0]}
                   </div>

@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { hiraganaMapStep2 } from "../../../kanas/kanas";
 // Import Swiper React components
@@ -12,13 +12,13 @@ import "@/src/styles/Learn.css";
 import "@/src/styles/Hiragana.css";
 import "../../../styles/LearnHiragana.css";
 
-
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
 
 function LearnHiraganaStep2() {
+  scroll(0, 0);
   return (
-    <div>
+    <div  className="main-step-body">
       <Swiper
         spaceBetween={1}
         pagination={{

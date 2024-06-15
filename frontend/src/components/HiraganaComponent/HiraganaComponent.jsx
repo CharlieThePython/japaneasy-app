@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useEffect } from "react";
 import samurai from "@/src/images/hiragana/samurai.png";
@@ -16,14 +16,20 @@ import cola from "../../images/hiragana/cola.png";
 
 //CSS
 import "@/src/styles/Hiragana.css";
+import { useSession } from "next-auth/react";
+import Link from "next/link";
 
 function HiraganaComponent() {
+  const { data: session } = useSession();
+  //Para modo dev:
+  // console.log(session);
+  scroll(0, 0);
   useEffect(() => {
     // Cuando la página se haya cargado completamente
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     }); // Hacer scroll al principio de la página
   }, []); // Se ejecuta solo una vez después del montaje inicial
 
@@ -33,11 +39,11 @@ function HiraganaComponent() {
         HIRAGANA? KATAKANA? WHAT IS THIS?
       </h1>
       <div className="card-box animated">
-        <section>
+        <section className="card-box-in-section">
           <img width="50%" height="auto" src={samurai.src} />
           ひらがな
         </section>
-        <section>
+        <section className="card-box-in-section">
           <img width="50%" height="auto" src={knight.src} />
           カタカナ
         </section>
@@ -79,11 +85,21 @@ function HiraganaComponent() {
       </div>
       <div className="hiragana-card-box animated">
         <section>
-          <img width="40%" height="auto" src={miso.src} />
+          <img
+            width="40%"
+            height="auto"
+            src={miso.src}
+            className="higher-image"
+          />
           みそ
         </section>
         <section>
-          <img width="40%" height="auto" src={temple.src} />
+          <img
+            width="40%"
+            height="auto"
+            src={temple.src}
+            className="higher-image"
+          />
           てら
         </section>
       </div>
@@ -131,11 +147,21 @@ function HiraganaComponent() {
       </div>
       <div className="hiragana-card-box animated">
         <section>
-          <img width="40%" height="auto" src={hamburger.src} />
+          <img
+            width="40%"
+            height="auto"
+            src={hamburger.src}
+            className="higher-image"
+          />
           ハンバーガー
         </section>
         <section>
-          <img width="40%" height="auto" src={hotel.src} />
+          <img
+            width="40%"
+            height="auto"
+            src={hotel.src}
+            className="higher-image"
+          />
           ホテル
         </section>
       </div>
@@ -175,22 +201,14 @@ function HiraganaComponent() {
             <h2>WANT TO LEARN SOME MORE?</h2>
           </section>
           <section className="button-box">
-            <button
-              onClick={() => {
-                window.location.href = "hiragana/learn/hiragana";
-              }}
-            >
+            <Link href={"hiragana/learn/hiragana"} className="hiragana-link">
               LEARN HIRAGANA
-            </button>
+            </Link>
           </section>
-          <section>
-            <button
-              onClick={() => {
-                window.location.href = "hiragana/learn/katakana";
-              }}
-            >
+          <section className="button-box">
+            <Link href={"hiragana/learn/katakana"} className="hiragana-link">
               LEARN KATANA
-            </button>
+            </Link>
           </section>
         </div>
 
@@ -199,22 +217,14 @@ function HiraganaComponent() {
             <h2>WANT TO PRACTICE LIKE A NINJA?</h2>
           </section>
           <section className="button-box">
-            <button
-              onClick={() => {
-                window.location.href = "hiragana/practice/hiragana";
-              }}
-            >
+            <Link href={"hiragana/practice/hiragana"} className="hiragana-link">
               PRACTICE HIRAGANA
-            </button>
+            </Link>
           </section>
-          <section>
-            <button
-              onClick={() => {
-                window.location.href = "hiragana/practice/katakana";
-              }}
-            >
+          <section className="button-box">
+            <Link href={"hiragana/practice/katakana"} className="hiragana-link">
               PRACTICE KATANA
-            </button>
+            </Link>
           </section>
         </div>
       </div>

@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import HiraganaTable from "../Global/HiraganaTable";
 import CheckList from "../Global/CheckList";
@@ -11,9 +11,8 @@ import "@/src/styles/Hiragana.css";
 import "../../styles/PracticeHiragana.css";
 
 function PracticeHiraganaComponent() {
-  const [receivedData, setReceivedData] = useState('');
-
-
+  const [receivedData, setReceivedData] = useState("");
+  scroll(0, 0);
 
   const createQueryString = (data) => {
     const params = new URLSearchParams({ receivedData: JSON.stringify(data) });
@@ -21,12 +20,13 @@ function PracticeHiraganaComponent() {
   };
 
   const rows = divideArrayIntoRows(hiraganaSymbols, 5);
-  console.log(rows);
+  //Para modo dev:
+  // console.log(rows);
   return (
     <>
       <Link
         href={{
-          pathname: '/hiragana/practice/hiragana/study'
+          pathname: "/hiragana/practice/hiragana/study",
         }}
         className="nav-link rounded-5"
         id="home-tab2"

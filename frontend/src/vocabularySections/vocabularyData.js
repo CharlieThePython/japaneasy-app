@@ -1011,8 +1011,6 @@ export const houseParts = [
   },
 ];
 
-
-
 export const vocabularyData = [
   { key: "food", value: food },
   { key: "transport", value: transport },

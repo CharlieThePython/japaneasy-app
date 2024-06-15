@@ -1,0 +1,245 @@
+.about-div {
+  margin: 1% 0;
+}
+
+.about-section {
+  color: black;
+  padding: 4% 4%;
+  transition: transform 0.3s ease-in-out;
+}
+.about-section:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.about-icons {
+  width: 6em;
+}
+
+.about-story-div {
+  flex-direction: row;
+}
+
+.about-story-section-small {
+  margin: 5% 0;
+  padding: 10%;
+}
+.about-story-section-big {
+  flex-grow: 1;
+  margin: 5% 0;
+  background-color: gray;
+}
+
+.about-form-section-container {
+  width: 45%;
+  height: 40em;
+  padding-top: 1%;
+  color: rgb(255, 236, 236);
+  background-color: rgb(243, 110, 110);
+  font-weight: bolder;
+  margin-top: 5%;
+  flex-direction: column;
+  align-items: center;
+  border: 0.3em solid rgb(235, 115, 115);
+}
+
+.about-form-section-container-h2 {
+  font-size: 2.5em;
+  color: rgb(255, 255, 255);
+}
+
+.form-box {
+  color: rgb(53, 50, 50);
+  margin: 0.5%;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-box div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-box button {
+  background-color: rgb(238, 181, 181);
+  margin-top: 2em;
+  padding: 8% 80%;
+}
+
+.form-box div label {
+  color: rgb(78, 73, 73);
+  margin: 3%;
+  font-size: 1.2em;
+}
+
+.form-input {
+  width: 150%;
+  height: 2em;
+  color: rgb(78, 73, 73);
+  text-indent: 1em;
+  padding: 20px 0;
+}
+
+.about-form-textarea {
+  width: 280%;
+  height: 14em;
+  text-indent: 1em;
+  text-size-adjust: inherit;
+  text-align: justify;
+  padding-top: 0.8em;
+  color: rgb(78, 73, 73);
+  resize: none;
+  padding-left: 1.2em;
+}
+
+/*MEDIA QUERIES*/
+/* Para iPad en orientación vertical */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .about-section {
+    padding: 4% 4%;
+  }
+  .about-icons {
+    width: 3em;
+  }
+  .info-box {
+    margin-top: 2em;
+    font-size: 0.6em;
+  }
+  .about-story-section-small,
+  .about-story-section-big {
+    margin: 4% 0;
+    padding: 8%;
+  }
+
+  .about-form-section-container {
+    width: 70%;
+    height: 36em;
+    margin-top: 4%;
+  }
+
+  .about-form-section-container-h2 {
+    font-size: 1.5em;
+    margin-top: 1%;
+  }
+
+  .form-box button {
+    padding: 6% 70%;
+  }
+
+  .form-box {
+    padding: 1.5%;
+  }
+
+  .form-input {
+    width: 130%;
+  }
+
+  .about-form-textarea {
+    width: 200%;
+    padding: 4%;
+    font-size: 1em;
+  }
+}
+
+/* Para iPad en orientación horizontal */
+@media only screen and (min-width: 766px) and (max-width: 1024px) and (orientation: landscape) {
+  .about-section {
+    padding: 6% 6%;
+  }
+  .about-icons {
+    width: 4em;
+  }
+  .about-story-section-small,
+  .about-story-section-big {
+    margin: 3% 0;
+    padding: 6%;
+  }
+  .info-box {
+    margin-top: 2em;
+    font-size: 0.8em;
+  }
+  .about-form-section-container {
+    width: 55%;
+    height: 38em;
+    margin-top: 3%;
+  }
+
+  .about-form-section-container-h2 {
+    font-size: 2em;
+    margin-top: 1%;
+  }
+
+  .form-box button {
+    padding: 5% 60%;
+  }
+
+  .form-input {
+    width: 120%;
+  }
+
+  .about-form-textarea {
+    width: 200%;
+    padding: 4%;
+    font-size: 1em;
+  }
+}
+
+/* Para iPad Air en orientación horizontal */
+@media only screen and (min-width: 820px) and (max-width: 1180px) and (orientation: landscape) {
+  .about-form-textarea {
+    width: 240%;
+    padding: 4%;
+    font-size: 1em;
+  }
+  .form-input {
+    width: 120%;
+  }
+  .about-form-section-container {
+    width: 55%;
+    height: 40em;
+    margin-top: 3%;
+  }
+  .info-box {
+    margin-top: 2em;
+    font-size: 0.6em;
+  }
+  .about-section {
+    padding: 4% 4%;
+  }
+  .about-icons {
+    width: 4em;
+  }
+}
+
+  /* Para iPhone 14 pro max en orientación vertical */
+  @media only screen and (min-width: 430px) and (max-width: 932px) and (orientation: portrait) {
+    .about-form-section-container {
+      padding-top: 6%;
+      transform: scale(0.7);
+      width: 100%;
+      margin-top: 1%;
+    }
+    .about-form-textarea {
+      width: 200%;
+      padding: 4%;
+      font-size: 1em;
+    }
+    .form-box button{
+      transform: scale(0.8);
+    }
+    .info-box h2{
+      font-size: 0.9em;
+      margin: 0 10%;
+    }
+    .about-div{
+      padding: 0 3%;
+    }
+    .about-icons {
+      width: 3em;
+    }
+  }

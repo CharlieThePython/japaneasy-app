@@ -30,29 +30,32 @@
 }
 .selected {
   background-color: #eb4034;
-  color: white !important; 
+  color: white !important;
 }
-.no-border-card-box:hover{
+.no-border-card-box:hover {
   cursor: pointer;
 }
 
-#n1:hover,#n2:hover,#n3:hover,#n4:hover,#n5:hover{
+#n1:hover,
+#n2:hover,
+#n3:hover,
+#n4:hover,
+#n5:hover {
   background-color: #eb4034;
   color: white;
 }
 
-.kanji-noken-section{
+.kanji-noken-section {
   font-size: 5em;
   text-align: center;
   margin-right: 6%;
-  margin-top: 2%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
-
-.kanji-noken-header{
+.kanji-noken-header {
   font-size: 10em;
-
 }
-.kanji-noken-link{
+.kanji-noken-link {
   width: 50%;
   margin: 15% 10%;
 }
@@ -67,7 +70,7 @@
 
 .kanji-noken-anchor::before,
 .kanji-noken-anchor::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -1px;
   width: 0;
@@ -91,12 +94,112 @@
   width: 100%;
 }
 
+.kanji-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5% 5%;
+}
+
+.kanji-table-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.kanji-table-section.visible {
+  opacity: 1;
+}
+.kanji-symbol-main{
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.kanji-symbol-main.visible{
+  opacity: 1;
+}
+.kanji-link {
+  padding: 2%;
+  margin: 2%;
+  text-decoration: none;
+  font-size: 5em;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.kanji-link:hover {
+  transform: scale(1.2);
+}
+
+.kanji-symbol {
+  font-size: 8em;
+  color: rgb(212, 85, 85);
+}
+.kanji-symbol-div {
+  margin-top: 2%;
+}
+
+.kanji-info {
+  margin-top: 2%;
+  width: 40%;
+  padding: 2% 0;
+}
+.kanji-paragraph {
+  font-size: 2em;
+}
+.kanji-paragraph-b {
+  font-size: 1.3em;
+  color: #e2e8f0;
+}
+
+.kanji-span {
+  font-weight: bolder;
+}
+
 .fade-in {
   animation: fadeIn 0.3s ease-in-out;
 }
 
 .fade-out {
   animation: fadeOut 0.5s ease-in-out;
+}
+
+.hover-box {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.hover-box img {
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 0.5em;
+  right: 0;
+  background-color: rgba(128, 128, 128, 0.7); /* fondo gris y transparente */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.hover-box:hover .overlay {
+  opacity: 1;
+}
+
+.overlay p {
+  margin: 0;
 }
 
 /* Definir las keyframes para las animaciones */
@@ -119,5 +222,127 @@
   to {
     opacity: 0;
     height: 0;
+  }
+}
+
+/*MEDIA QUERIES*/
+/* Para iPad en orientación vertical */
+@media only screen and (min-width: 766px) and (max-width: 1024px) and (orientation: portrait) {
+  .vocabulary-div {
+    width: 80%;
+    padding: 2% 5%;
+    font-size: 2.5em;
+  }
+  .card-box {
+    transform: scale(0.7);
+    margin: 0.1% 0;
+    padding: 0.5% 1%;
+  }
+  .hiragana-card-box {
+    transform: scale(0.9);
+  }
+  .vocabulary-img {
+    width: 100%;
+  }
+
+  .description-box-title {
+    font-size: 1.8em;
+  }
+
+  #n5-section,
+  #n4-section,
+  #n3-section,
+  #n2-section,
+  #n1-section {
+    font-size: 0.5em;
+  }
+
+  .kanji-noken-header {
+    margin-top: 0.5em;
+    font-size: 10em;
+    font-weight: bolder;
+  }
+  .kanji-noken-anchor {
+    font-size: 2em;
+    font-weight: bolder;
+  }
+  .kanji-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4% 1%;
+  }
+  .kanji-link {
+    padding: 2%;
+    margin: 2%;
+    text-decoration: none;
+    font-size: 4em;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  .kanji-info{
+    margin-top: 1%;
+    width: 70%;
+    padding: 5% 0;
+  }
+  .kanji-paragraph{
+    font-size: 2.2em;
+  }
+  .kanji-paragraph-b{
+    font-size: 1.4em;
+  }
+}
+
+/* Para iPad en orientación horizontal */
+@media only screen and (min-width: 766px) and (max-width: 1024px) and (orientation: landscape) {
+  .vocabulary-div {
+    width: 60%;
+    padding: 2% 3%;
+    font-size: 2em;
+  }
+  .card-box {
+    transform: scale(0.7);
+    margin: 0.1% 0;
+    padding: 0.5% 1%;
+  }
+  .hiragana-card-box {
+    margin: 1%;
+  }
+  .vocabulary-img {
+    width: 90%;
+  }
+
+  .description-box-title {
+    font-size: 1.6em;
+  }
+  #n5-section,
+  #n4-section,
+  #n3-section,
+  #n2-section,
+  #n1-section {
+    font-size: 0.6em;
+  }
+
+  .kanji-noken-header {
+    margin-top: 0.2em;
+    font-size: 10em;
+    font-weight: bolder;
+  }
+  .kanji-noken-anchor {
+    font-size: 2em;
+    font-weight: bolder;
+  }
+  .kanji-info{
+    margin-top: 1%;
+    width: 70%;
+    padding: 2% 0;
+  }
+  .kanji-paragraph{
+    font-size: 2.2em;
+  }
+  .kanji-paragraph-b{
+    font-size: 1.4em;
   }
 }
